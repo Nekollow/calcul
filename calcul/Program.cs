@@ -25,27 +25,21 @@ namespace Calculs
                 Console.Write("Choix :                          ");
                 choix = Console.ReadLine();
                 // traitement des choix
-                switch (choix)
+                if (choix != 0)
                 {
-                    case "1": // addition
-                        val1 = rand.Next(1, 10);
-                        val2 = rand.Next(1, 10);
-                        // saisie de la réponse
-                        correct = false;
-                        while (!correct)
-                        {
-                            try
-                            {
-                                Console.Write(val1 + " + " + val2 + " = ");
-                                reponse = int.Parse(Console.ReadLine());
-                                correct = true;
-                            }
-                            catch
-                            {
-                                Console.WriteLine("Saisissez un entier");
-                            }
-                        }
-                        // comparaison avec la réponse
+                    // création des 2 nombres aléatoires
+                    val1 = rand.Next(1, 10);
+                    val2 = rand.Next(1, 10);
+                    if (choix == 1)
+
+
+                    {  // choix de l'addition
+                       // saisie de la réponse
+
+                        Console.Write(val1 + " + " + val2 + " = ");
+                        reponse = int.Parse(Console.ReadLine());
+
+                        // comparaison avec la bonne réponse
                         solution = val1 + val2;
                         if (reponse == solution)
                         {
@@ -55,42 +49,36 @@ namespace Calculs
                         {
                             Console.WriteLine("Faux : " + val1 + " + " + val2 + " = " + solution);
                         }
-                        break;
-                    case "2": // multiplication
-                        val1 = rand.Next(1, 10);
-                        val2 = rand.Next(1, 10);
+                        else;
+                    }
+
+                    {   // choix de la multiplication
                         // saisie de la réponse
-                        correct = false;
-                        while (!correct)
-                        {
-                            try
-                            {
-                                Console.Write(val1 + " x " + val2 + " = ");
-                                reponse = int.Parse(Console.ReadLine());
-                                correct = true;
-                            }
-                            catch
-                            {
-                                Console.WriteLine("Saisissez un entier");
-                            }
-                        }
-                        // comparaison avec la réponse
-                        solution = val1 * val2;
+
+                        Console.Write(val1 + " + " + val2 + " = ");
+                        reponse = int.Parse(Console.ReadLine());
+
+                        // comparaison avec la bonne réponse
+                        solution = val1 + val2;
                         if (reponse == solution)
                         {
                             Console.WriteLine("Bravo !");
                         }
                         else
                         {
-                            Console.WriteLine("Faux : " + val1 + " x " + val2 + " = " + solution);
+                            Console.WriteLine("Faux : " + val1 + " + " + val2 + " = " + solution);
                         }
-                        break;
-                    case "0": // demande de fin de programme
-                        break;
-                    default: // autre valeur donc erreur de saisie
-                        Console.WriteLine("Erreur de saisie");
-                        break;
-                }
+                        else;
+
+                        (case != 0); // demande de fin de programme
+                    break;
+
+                    // autre valeur donc erreur de saisi
+                    Console.WriteLine("Erreur de saisie");
+                    break; 
+                } 
+                    
+                
             }
         }
     }
